@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Capirava LTDA. — Pantanal Criativo</title>
 
-  <!-- Fonte moderna -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- CSS original -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="lightbox.css" />
 
-  <!-- CSS principal -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Lightbox -->
-  <link rel="stylesheet" href="lightbox.css">
-
-  <!-- Split-showcase (novo) -->
-  <link rel="stylesheet" href="css/enhanced.css">
+  <!-- Incrementos -->
+  <link rel="stylesheet" href="css/enhanced.css" />
 </head>
 <body>
-  <!-- Cabeçalho -->
+
+  <!-- Ícones sociais fixos (novos) -->
+  <div class="capx-social" aria-label="Redes sociais">
+    <a href="#" aria-label="Instagram" title="Instagram">
+      <img src="imagens/icons/instagram.svg" alt="Instagram">
+    </a>
+    <a href="#" aria-label="LinkedIn" title="LinkedIn">
+      <img src="imagens/icons/linkedin.svg" alt="LinkedIn">
+    </a>
+    <a href="https://wa.me/5567992265017" aria-label="WhatsApp" title="WhatsApp">
+      <img src="imagens/icons/whatsapp.svg" alt="WhatsApp">
+    </a>
+    <a href="#" aria-label="Behance" title="Behance">
+      <img src="imagens/icons/behance.svg" alt="Behance">
+    </a>
+  </div>
+
+  <!-- Cabeçalho (original) -->
   <header id="topo">
     <div class="logo">Capirava LTDA.</div>
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#clientes">Clientes</a>
       <a href="#galeria">Galeria</a>
       <a href="#depoimentos">Depoimentos</a>
+      <a href="#faq">FAQ</a>
       <a href="#contato" class="btn-contato">Orçar agora</a>
     </nav>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero (original, sem remoções) -->
   <section id="hero">
     <h1>Inteligência criativa com raízes no Pantanal</h1>
     <p>Branding regional, identidade visual e experiências digitais direto de Dourados-MS.</p>
@@ -40,14 +56,44 @@
     </div>
   </section>
 
-  <!-- Projetos (novo: âncora para o split-showcase) -->
+  <!-- Projetos (original – mantenha seu conteúdo aqui) -->
   <section id="projetos" class="container">
     <h2>Conheça nossos projetos</h2>
-    <!-- O conteúdo visual desta seção é injetado dinamicamente por js/enhanced.js,
-         usando imagens existentes (de #projetos ou #galeria). -->
+    <!-- SEU CONTEÚDO ORIGINAL DE PROJETOS PERMANECE AQUI -->
   </section>
 
-  <!-- Sobre -->
+  <!-- Portfólio em destaque (novo) -->
+  <section id="portfolio" class="container capx-portfolio">
+    <h2 class="capx-reveal">Portfólio em destaque</h2>
+    <div class="capx-grid">
+      <a class="capx-card capx-reveal" href="#contato" aria-label="Projeto 1">
+        <figure class="capx-fig" style="background-image:url('imagens/portfolio/projeto-1.jpg')"></figure>
+        <div class="capx-meta"><h3>Projeto 1</h3><span>Identidade • Landing Page</span></div>
+      </a>
+      <a class="capx-card capx-reveal" href="#contato" aria-label="Projeto 2">
+        <figure class="capx-fig" style="background-image:url('imagens/portfolio/projeto-2.jpg')"></figure>
+        <div class="capx-meta"><h3>Projeto 2</h3><span>Branding • Social</span></div>
+      </a>
+      <a class="capx-card capx-reveal" href="#contato" aria-label="Projeto 3">
+        <figure class="capx-fig" style="background-image:url('imagens/portfolio/projeto-3.jpg')"></figure>
+        <div class="capx-meta"><h3>Projeto 3</h3><span>Packaging • Site</span></div>
+      </a>
+      <a class="capx-card capx-reveal" href="#contato" aria-label="Projeto 4">
+        <figure class="capx-fig" style="background-image:url('imagens/portfolio/projeto-4.jpg')"></figure>
+        <div class="capx-meta"><h3>Projeto 4</h3><span>Rebranding</span></div>
+      </a>
+      <a class="capx-card capx-reveal" href="#contato" aria-label="Projeto 5">
+        <figure class="capx-fig" style="background-image:url('imagens/portfolio/projeto-5.jpg')"></figure>
+        <div class="capx-meta"><h3>Projeto 5</h3><span>Campanha</span></div>
+      </a>
+      <a class="capx-card capx-reveal" href="#contato" aria-label="Projeto 6">
+        <figure class="capx-fig" style="background-image:url('imagens/portfolio/projeto-6.jpg')"></figure>
+        <div class="capx-meta"><h3>Projeto 6</h3><span>Produto • App</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Sobre (original) -->
   <section id="sobre" class="container">
     <h2>Sobre nós</h2>
     <p>Somos uma startup nascida em Dourados-MS. A capivara inspira a nossa sociabilidade e a onça-pintada, a nossa força estratégica. Criamos marcas que nascem do território e performam no digital.</p>
@@ -59,7 +105,31 @@
     <p class="extra">Tereré-friendly • Pantanal-first • Data + Intuição</p>
   </section>
 
-  <!-- Serviços -->
+  <!-- Equipe (novo) -->
+  <section id="equipe" class="container capx-equipe">
+    <h2 class="capx-reveal">Nosso time</h2>
+    <p class="capx-subtle capx-reveal">Adicione as fotos em imagens/equipe/ (member-1.jpg, member-2.jpg...)</p>
+    <div class="capx-team">
+      <article class="capx-member capx-reveal">
+        <div class="capx-avatar" style="background-image:url('imagens/equipe/member-1.jpg')"></div>
+        <h3>Nome 1</h3><p>Direção de Criação</p>
+      </article>
+      <article class="capx-member capx-reveal">
+        <div class="capx-avatar" style="background-image:url('imagens/equipe/member-2.jpg')"></div>
+        <h3>Nome 2</h3><p>Brand Strategy</p>
+      </article>
+      <article class="capx-member capx-reveal">
+        <div class="capx-avatar" style="background-image:url('imagens/equipe/member-3.jpg')"></div>
+        <h3>Nome 3</h3><p>UX/UI Designer</p>
+      </article>
+      <article class="capx-member capx-reveal">
+        <div class="capx-avatar" style="background-image:url('imagens/equipe/member-4.jpg')"></div>
+        <h3>Nome 4</h3><p>Performance</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Serviços (original) -->
   <section id="servicos" class="container">
     <h2>O que fazemos</h2>
     <div class="cards">
@@ -70,36 +140,66 @@
     </div>
   </section>
 
-  <!-- Galeria -->
-  <section id="galeria" class="container">
-    <h2>Galeria pantaneira</h2>
-    <div class="grid-galeria">
-      <a href="imagens/onca.jpg" data-lightbox="pantanal" data-title="Onça-pintada"><img src="imagens/onca.jpg" alt="Onça-pintada"></a>
-      <a href="imagens/tuiuiu.jpg" data-lightbox="pantanal" data-title="Tuiuiú"><img src="imagens/tuiuiu.jpg" alt="Tuiuiú"></a>
-      <a href="imagens/vegetacao.jpg" data-lightbox="pantanal" data-title="Vegetação pantaneira"><img src="imagens/vegetacao.jpg" alt="Vegetação pantaneira"></a>
+  <!-- Clientes (novo) -->
+  <section id="clientes" class="container capx-clientes">
+    <h2 class="capx-reveal">Marcas que já cruzaram nosso caminho</h2>
+    <div class="capx-logos">
+      <img src="imagens/logos/logo-1.svg" alt="Cliente 1" />
+      <img src="imagens/logos/logo-2.svg" alt="Cliente 2" />
+      <img src="imagens/logos/logo-3.svg" alt="Cliente 3" />
+      <img src="imagens/logos/logo-4.svg" alt="Cliente 4" />
+      <img src="imagens/logos/logo-5.svg" alt="Cliente 5" />
+      <img src="imagens/logos/logo-6.svg" alt="Cliente 6" />
     </div>
   </section>
 
-  <!-- Depoimentos -->
+  <!-- Galeria (original) -->
+  <section id="galeria" class="container">
+    <h2>Galeria pantaneira</h2>
+    <div class="grid-galeria">
+      <a href="imagens/onca.jpg" data-lightbox="pantanal" data-title="Onça-pintada"><img src="imagens/onca.jpg" alt="Onça-pintada" /></a>
+      <a href="imagens/tuiuiu.jpg" data-lightbox="pantanal" data-title="Tuiuiú"><img src="imagens/tuiuiu.jpg" alt="Tuiuiú" /></a>
+      <a href="imagens/vegetacao.jpg" data-lightbox="pantanal" data-title="Vegetação pantaneira"><img src="imagens/vegetacao.jpg" alt="Vegetação pantaneira" /></a>
+    </div>
+  </section>
+
+  <!-- Depoimentos (original) -->
   <section id="depoimentos" class="container">
     <h2>O que dizem</h2>
     <blockquote>“A Capirava entendeu nossa essência regional e transformou em uma marca que converte. Resultado real em 60 dias.” — Marina S., comércio local em Dourados</blockquote>
   </section>
 
-  <!-- Contato -->
+  <!-- FAQ (novo) -->
+  <section id="faq" class="container capx-faq">
+    <h2 class="capx-reveal">Perguntas frequentes</h2>
+    <div class="capx-qa capx-reveal">
+      <button class="capx-q">Em quanto tempo entregam uma identidade visual?<span class="capx-plus">+</span></button>
+      <div class="capx-a"><p>Projetos enxutos: 2–4 semanas. Marcas completas: 4–8 semanas.</p></div>
+    </div>
+    <div class="capx-qa capx-reveal">
+      <button class="capx-q">Vocês atendem fora de Dourados-MS?<span class="capx-plus">+</span></button>
+      <div class="capx-a"><p>Sim, operação remota com rituais semanais e apresentações ao vivo.</p></div>
+    </div>
+    <div class="capx-qa capx-reveal">
+      <button class="capx-q">Qual o próximo passo para começar?<span class="capx-plus">+</span></button>
+      <div class="capx-a"><p>Fale com a gente pelo formulário: objetivos, prazos e orçamento.</p></div>
+    </div>
+  </section>
+
+  <!-- Contato (original) -->
   <section id="contato" class="container">
     <h2>Fale com a gente</h2>
     <p>Vamos criar algo com a cara do MS e o desempenho que sua marca merece.</p>
     <form>
-      <input type="text" placeholder="Seu nome" required>
-      <input type="email" placeholder="Seu e-mail" required>
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu e-mail" required />
       <textarea placeholder="Conte sobre seu projeto" required></textarea>
       <button type="submit">Enviar</button>
     </form>
     <p class="prazo">Sem spam — respondemos em até 1 dia útil.</p>
   </section>
 
-  <!-- Rodapé -->
+  <!-- Rodapé (original) -->
   <footer>
     <p>© 2025 Capirava LTDA. — Do Pantanal para o mundo, com inteligência e leveza.</p>
     <div class="social">
@@ -107,11 +207,11 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- Scripts originais -->
   <script src="lightbox.js"></script>
   <script src="script.js"></script>
 
-  <!-- Split-showcase (novo) -->
+  <!-- Incrementos -->
   <script src="js/enhanced.js" defer></script>
 </body>
 </html>
