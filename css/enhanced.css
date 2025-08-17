@@ -27,7 +27,7 @@
   width: 20px;
   height: 20px;
   display: block;
-  filter: invert(1);
+
 }
 @media (max-width: 640px) {
   .capx-social {
