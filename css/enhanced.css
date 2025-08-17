@@ -1,121 +1,197 @@
-/* Ícones sociais fixos */
+/* Ícones sociais */
 .capx-social {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 12px;
+  left: 12px;
   display: flex;
-  gap: 8px;
+  gap: 10px;
   z-index: 1000;
 }
-.capx-social a { width: 34px; height: 34px; display: block; }
-.capx-social img { width: 100%; height: auto; display: block; }
-
-/* Equipe */
-.capx-equipe { padding: 56px 0; }
-.capx-equipe .capx-subtle { color: #6b7280; margin: 6px 0 18px; }
-.capx-team {
+.capx-social a {
+  width: 36px;
+  height: 36px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: saturate(120%) blur(2px);
+  transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
 }
-.capx-member {
-  background: #fff;
-  border: 1px solid #eef2f7;
-  border-radius: 14px;
-  padding: 16px;
-  text-align: center;
-  transition: transform .2s ease, box-shadow .2s ease;
+.capx-social a:hover {
+  transform: translateY(-2px);
+  background: rgba(0,0,0,0.8);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
 }
-.capx-member:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,.06); }
-.capx-avatar {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 12px;
-  background-color: #e5e7eb;
-  background-size: cover;
-  background-position: center;
-  margin-bottom: 10px;
-}
-.capx-member h3 { font-size: 1rem; margin-bottom: 4px; }
-.capx-member p { color: #6b7280; font-size: .95rem; }
-
-/* Portfólio em destaque */
-.capx-portfolio { padding: 56px 0; }
-.capx-portfolio h2 { margin-bottom: 20px; }
-.capx-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-.capx-card { display: block; text-decoration: none; color: inherit; }
-.capx-fig {
-  width: 100%;
-  aspect-ratio: 16 / 10;
-  border-radius: 14px;
-  background: #e5e7eb center/cover no-repeat;
-  box-shadow: 0 14px 40px rgba(0,0,0,.08);
-  transition: transform .3s ease, box-shadow .3s ease;
-}
-.capx-card:hover .capx-fig { transform: translateY(-3px); box-shadow: 0 18px 50px rgba(0,0,0,.12); }
-.capx-meta { margin-top: 8px; }
-.capx-meta h3 { font-size: 1.02rem; margin-bottom: 2px; }
-.capx-meta span { color: #6b7280; font-size: .95rem; }
-
-/* Clientes (logo wall) */
-.capx-clientes { padding: 56px 0; }
-.capx-clientes h2 { margin-bottom: 20px; }
-.capx-logos {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
-  align-items: center;
-  filter: grayscale(1);
-  opacity: .95;
-}
-.capx-logos img { width: 100%; height: auto; object-fit: contain; }
-
-/* FAQ (acordeão) */
-.capx-faq { padding: 56px 0; }
-.capx-faq h2 { margin-bottom: 14px; }
-.capx-qa + .capx-qa { margin-top: 10px; }
-.capx-q {
-  width: 100%;
-  text-align: left;
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  padding: 16px 18px;
-  border-radius: 12px;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-}
-.capx-plus { font-weight: 700; color: #6b7280; }
-.capx-a {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height .25s ease;
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-top: 0;
-  border-radius: 0 0 12px 12px;
-  padding: 0 18px;
-}
-.capx-a p { color: #6b7280; padding: 12px 0 16px; }
-
-/* Reveal suave (opcional) */
-.capx-reveal { opacity: 0; transform: translateY(14px); transition: opacity .4s ease, transform .4s ease; }
-.capx-reveal.capx-in { opacity: 1; transform: none; }
-
-/* Responsividade */
-@media (max-width: 1024px) {
-  .capx-team { grid-template-columns: repeat(2, 1fr); }
-  .capx-grid { grid-template-columns: repeat(2, 1fr); }
-  .capx-logos { grid-template-columns: repeat(4, 1fr); }
+.capx-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  filter: invert(1);
 }
 @media (max-width: 640px) {
-  .capx-team,
-  .capx-grid { grid-template-columns: 1fr; }
-  .capx-logos { grid-template-columns: repeat(3, 1fr); }
+  .capx-social {
+    top: auto;
+    bottom: 12px;
+    left: 12px;
+    right: 12px;
+    justify-content: center;
+  }
+}
+
+/* Portfólio em destaque */
+.capx-portfolio .capx-grid {
+  --gap: 18px;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 900px) {
+  .capx-portfolio .capx-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .capx-portfolio .capx-grid { grid-template-columns: 1fr; }
+}
+.capx-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #0f0f0f;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.18);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.capx-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.22);
+}
+.capx-fig {
+  width: 100%;
+  padding-top: 62%;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05);
+}
+.capx-meta {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 14px 16px;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 60%, rgba(0,0,0,0.85) 100%);
+  color: #fff;
+}
+.capx-meta h3 {
+  margin: 0 0 4px 0;
+  font-size: 1.05rem;
+}
+.capx-meta span {
+  font-size: .9rem;
+  opacity: .9;
+}
+
+/* Equipe */
+.capx-equipe .capx-team {
+  --gap: 20px;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(4, minmax(0,1fr));
+}
+@media (max-width: 900px) {
+  .capx-equipe .capx-team { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .capx-equipe .capx-team { grid-template-columns: 1fr; }
+}
+.capx-member {
+  text-align: center;
+  padding: 14px;
+  border-radius: 12px;
+  background: #101010;
+  color: #eaeaea;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.14);
+}
+.capx-avatar {
+  width: 100%;
+  padding-top: 100%;
+  margin-bottom: 10px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}
+.capx-subtle {
+  color: #777;
+  font-size: .95rem;
+}
+
+/* Clientes */
+.capx-clientes .capx-logos {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(6, minmax(0,1fr));
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .capx-clientes .capx-logos { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 560px) {
+  .capx-clientes .capx-logos { grid-template-columns: repeat(2, 1fr); }
+}
+.capx-clientes .capx-logos img {
+  width: 100%;
+  height: 48px;
+  object-fit: contain;
+  filter: grayscale(1) contrast(1.05) opacity(.9);
+  transition: filter .2s ease;
+}
+.capx-clientes .capx-logos img:hover {
+  filter: none;
+}
+
+/* FAQ */
+.capx-faq .capx-qa {
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+  padding: 8px 0;
+}
+.capx-faq .capx-q {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 10px 0;
+  font-size: 1.05rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.capx-faq .capx-plus {
+  display: inline-block;
+  font-weight: 700;
+  transition: transform .2s ease;
+}
+.capx-faq .open .capx-plus {
+  transform: rotate(45deg);
+}
+.capx-faq .capx-a {
+  padding: 0 0 10px 0;
+  color: #333;
+}
+
+/* Botão WhatsApp destacado (opcional, caso seu style.css não trate) */
+.btn.btn-whats {
+  background: #25D366;
+  color: #fff;
+  border: none;
+}
+.btn.btn-whats:hover {
+  background: #1fb057;
+}
+
+/* Animações de entrada */
+.capx-reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.capx-reveal.capx-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
