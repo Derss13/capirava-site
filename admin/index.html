@@ -3,7 +3,41 @@
   <head>
     <meta charset="utf-8" />
     <title>Capirava CMS</title>
+    <script>
+      window.CMS_MANUAL_INIT = true;
+      window.CMS_CONFIG = {
+        backend: {
+          name: "github",
+          repo: "Derss13/capirava-site",
+          branch: "main",
+          auth_scope: "repo",
+          client_id: "Ov23li71mMHWz1qz8ypt"
+        },
+        media_folder: "imagens/uploads",
+        public_folder: "/imagens/uploads",
+        collections: [
+          {
+            name: "paginas",
+            label: "Páginas",
+            files: [
+              {
+                file: "content/sobre.md",
+                label: "Sobre",
+                name: "sobre",
+                fields: [
+                  { label: "Título", name: "title", widget: "string" },
+                  { label: "Conteúdo", name: "body", widget: "markdown" }
+                ]
+              }
+            ]
+          }
+        ]
+      };
+    </script>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      window.CMS.init(window.CMS_CONFIG);
+    </script>
   </head>
   <body>
     <div id="nc-root"></div>
