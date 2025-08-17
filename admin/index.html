@@ -100,7 +100,18 @@
     </script>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
     <script>
-      window.CMS.init(window.CMS_CONFIG);
+      function startCMS() {
+        if (window.CMS && window.CMS_CONFIG) {
+          window.CMS.init(window.CMS_CONFIG);
+        } else {
+          setTimeout(startCMS, 50);
+        }
+      }
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', startCMS);
+      } else {
+        startCMS();
+      }
     </script>
   </head>
   <body>
