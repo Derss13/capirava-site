@@ -1,10 +1,10 @@
+
 backend:
   name: github
   repo: Derss13/capirava-site
   branch: main
   base_url: https://decap-cms-oauth-rho.vercel.app
   auth_endpoint: /api/auth
-
 
 media_folder: "imagens/uploads"
 public_folder: "/imagens/uploads"
@@ -61,4 +61,3 @@ collections:
         fields:
           - { label: "Título", name: "title", widget: "string" }
           - { label: "Conteúdo", name: "body", widget: "markdown" }
-
