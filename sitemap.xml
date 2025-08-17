@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://SEU_DOMINIO/</loc>
+  </url>
+  <url>
+    <loc>https://SEU_DOMINIO/#sobre</loc>
+  </url>
+  <url>
+    <loc>https://SEU_DOMINIO/#servicos</loc>
+  </url>
+  <url>
+    <loc>https://SEU_DOMINIO/#portfolio</loc>
+  </url>
+  <url>
+    <loc>https://SEU_DOMINIO/#equipe</loc>
+  </url>
+  <url>
+    <loc>https://SEU_DOMINIO/#clientes</loc>
+  </url>
+  <url>
+    <loc>https://SEU_DOMINIO/#galeria</loc>
+  </url>
+  <url>
+    <loc>https://SEU_DOMINIO/#depoimentos</loc>
+  </url>
+  <url>
+    <loc>https://SEU_DOMINIO/#faq</loc>
+  </url>
+  <url>
+    <loc>https://SEU_DOMINIO/#contato</loc>
+  </url>
+</urlset>
