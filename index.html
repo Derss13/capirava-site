@@ -7,15 +7,17 @@
 
   <!-- Fonte moderna -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  
+
   <!-- CSS principal -->
   <link rel="stylesheet" href="style.css">
 
   <!-- Lightbox -->
   <link rel="stylesheet" href="lightbox.css">
+
+  <!-- Split-showcase (novo) -->
+  <link rel="stylesheet" href="css/enhanced.css">
 </head>
 <body>
-
   <!-- Cabeçalho -->
   <header id="topo">
     <div class="logo">Capirava LTDA.</div>
@@ -34,8 +36,15 @@
     <p>Branding regional, identidade visual e experiências digitais direto de Dourados-MS.</p>
     <div class="cta">
       <a href="#projetos" class="btn">Conheça nossos projetos</a>
-      <a href="https://wa.me/55SEUNUMERO" class="btn btn-whats">Falar no WhatsApp</a>
+      <a href="https://wa.me/5567992265017" class="btn btn-whats">Falar no WhatsApp</a>
     </div>
+  </section>
+
+  <!-- Projetos (novo: âncora para o split-showcase) -->
+  <section id="projetos" class="container">
+    <h2>Conheça nossos projetos</h2>
+    <!-- O conteúdo visual desta seção é injetado dinamicamente por js/enhanced.js,
+         usando imagens existentes (de #projetos ou #galeria). -->
   </section>
 
   <!-- Sobre -->
@@ -101,5 +110,8 @@
   <!-- Scripts -->
   <script src="lightbox.js"></script>
   <script src="script.js"></script>
+
+  <!-- Split-showcase (novo) -->
+  <script src="js/enhanced.js" defer></script>
 </body>
 </html>

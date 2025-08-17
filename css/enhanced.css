@@ -1,0 +1,81 @@
+/* Namespaced para evitar conflito com seu CSS */
+
+/* Efeito reveal */
+.capx-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity .5s ease, transform .5s ease;
+}
+.capx-reveal.capx-in {
+  opacity: 1;
+  transform: none;
+}
+
+/* Split showcase (coluna fixa + cenas roláveis) */
+.capx-split {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(16px, 3vw, 32px);
+  margin: clamp(24px, 5vw, 56px) 0;
+  align-items: start;
+}
+.capx-sticky {
+  position: sticky;
+  top: 12vh; /* abaixo do header */
+  align-self: start;
+}
+.capx-sub {
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: #666;
+  font-size: .9rem;
+  margin-bottom: .25rem;
+}
+.capx-title {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  line-height: 1.15;
+  margin-bottom: .5rem;
+}
+.capx-desc {
+  color: #666;
+  max-width: 42ch;
+}
+
+/* Cenas (lado direito) */
+.capx-scenes { position: relative; }
+.capx-scene {
+  margin-bottom: clamp(14vh, 22vh, 28vh);
+  opacity: .45;
+  transform: scale(.985);
+  transition: opacity .35s ease, transform .35s ease;
+}
+.capx-scene.capx-active {
+  opacity: 1;
+  transform: scale(1);
+}
+.capx-fig {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 14px 50px rgba(0,0,0,.12);
+  background: #000;
+}
+.capx-fig img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scale(1.02);
+  transition: transform .6s ease;
+}
+.capx-scene.capx-active .capx-fig img {
+  transform: scale(1);
+}
+.capx-cap { margin-top: .75rem; }
+.capx-cap h4 { margin-bottom: .25rem; font-size: 1.05rem; }
+.capx-cap p { color: #666; }
+
+/* Responsivo */
+@media (max-width: 960px){
+  .capx-split { grid-template-columns: 1fr; }
+  .capx-sticky { position: static; top: auto; }
+  .capx-scene { margin-bottom: 14vh; }
+}
