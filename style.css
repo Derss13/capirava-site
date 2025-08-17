@@ -257,3 +257,30 @@ footer a {
   opacity: 1;
   transform: translateY(0);
 }
+
+.capx-social {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
+.capx-social a {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.55);
+  transition: transform .2s ease, background .2s ease;
+}
+.capx-social a:hover {
+  transform: translateY(-2px);
+  background: rgba(0,0,0,0.8);
+}
+.capx-icon {
+  width: 20px;
+  height: 20px;
+  filter: invert(1);
+}
