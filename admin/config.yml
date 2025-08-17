@@ -1,0 +1,60 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+publish_mode: editorial_workflow
+
+collections:
+  - name: "paginas"
+    label: "Páginas"
+    files:
+      - file: "content/sobre.md"
+        label: "Sobre"
+        name: "sobre"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - file: "content/servicos.md"
+        label: "Serviços"
+        name: "servicos"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - file: "content/portifolio.md"
+        label: "Portifólio"
+        name: "portifolio"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - file: "content/equipe.md"
+        label: "Equipe"
+        name: "equipe"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - file: "content/clientes.md"
+        label: "Clientes"
+        name: "clientes"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - file: "content/galeria.md"
+        label: "Galeria"
+        name: "galeria"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - file: "content/depoimentos.md"
+        label: "Depoimentos"
+        name: "depoimentos"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
+      - file: "content/faq.md"
+        label: "FAQ"
+        name: "faq"
+        fields:
+          - { label: "Título", name: "title", widget: "string" }
+          - { label: "Conteúdo", name: "body", widget: "markdown" }
