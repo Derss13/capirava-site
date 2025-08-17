@@ -1,11 +1,10 @@
 backend:
   name: github
-  repo: derss13/capirava-site
+  repo: Derss13/capirava-site
   branch: main
-  auth_scope: repo
 
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: "imagens/uploads"
+public_folder: "/imagens/uploads"
 
 collections:
   - name: "paginas"
@@ -14,48 +13,6 @@ collections:
       - file: "content/sobre.md"
         label: "Sobre"
         name: "sobre"
-        fields:
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "body", widget: "markdown" }
-      - file: "content/servicos.md"
-        label: "Serviços"
-        name: "servicos"
-        fields:
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "body", widget: "markdown" }
-      - file: "content/portifolio.md"
-        label: "Portifólio"
-        name: "portifolio"
-        fields:
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "body", widget: "markdown" }
-      - file: "content/equipe.md"
-        label: "Equipe"
-        name: "equipe"
-        fields:
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "body", widget: "markdown" }
-      - file: "content/clientes.md"
-        label: "Clientes"
-        name: "clientes"
-        fields:
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "body", widget: "markdown" }
-      - file: "content/galeria.md"
-        label: "Galeria"
-        name: "galeria"
-        fields:
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "body", widget: "markdown" }
-      - file: "content/depoimentos.md"
-        label: "Depoimentos"
-        name: "depoimentos"
-        fields:
-          - { label: "Título", name: "title", widget: "string" }
-          - { label: "Conteúdo", name: "body", widget: "markdown" }
-      - file: "content/faq.md"
-        label: "FAQ"
-        name: "faq"
         fields:
           - { label: "Título", name: "title", widget: "string" }
           - { label: "Conteúdo", name: "body", widget: "markdown" }

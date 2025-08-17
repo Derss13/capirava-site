@@ -1,4 +1,5 @@
 ---
-title: Sobre
+title: Sobre a Capirava
 ---
-Conteúdo da seção Sobre.
+
+Somos uma empresa pantaneira com foco em soluções criativas e sustentáveis.
